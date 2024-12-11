@@ -1,5 +1,7 @@
 import { Meta } from '@storybook/react'
-import Button from '.'
+import { AddShoppingCart } from '@styled-icons/material-outlined/AddShoppingCart'
+
+import Button, { ButtonProps } from '.'
 
 export default {
   title: 'Button',
@@ -7,5 +9,26 @@ export default {
 } as Meta
 
 export const Default = {
-  render: () => <Button />
+  render: (args: ButtonProps) => <Button {...args} />,
+  args: {
+    children: 'Buy now'
+  }
+}
+
+export const withIcon = {
+  render: (args: ButtonProps) => <Button {...args} />,
+  args: {
+    children: 'Buy now',
+    icon: <AddShoppingCart />
+  }
+}
+
+export const asLink = {
+  render: (args: ButtonProps) => <Button {...args} />,
+  args: {
+    size: 'large',
+    children: 'Buy now',
+    as: 'a',
+    href: '/link'
+  }
 }

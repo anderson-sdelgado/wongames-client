@@ -1,6 +1,5 @@
 import { Meta } from '@storybook/react'
 import Banner, { BannerProps } from '.'
-import { R } from 'styled-icons/crypto'
 
 export default {
   title: 'Banner',
